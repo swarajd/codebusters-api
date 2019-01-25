@@ -1,0 +1,29 @@
+{
+  "name": "codebusters-api",
+  "version": "1.0.0",
+  "description": "API to generate codebusters questions",
+  "main": "build/app.js",
+  "scripts": {
+    "test": "jest",
+    "tsc": "tsc",
+    "dev": "ts-node-dev --respawn --transpileOnly ./src/app.ts",
+    "prod": "rimraf ./build && tsc && node ./build/app.js"
+  },
+  "keywords": [
+    "ciphers",
+    "node.js",
+    "cryptography"
+  ],
+  "author": "swarajd",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "express": "^4.16.4",
+    "typescript": "^3.2.4"
+  },
+  "devDependencies": {
+    "jest": "^24.0.0",
+    "rimraf": "^2.6.3",
+    "ts-node-dev": "^1.0.0-pre.32"
+  }
+}
