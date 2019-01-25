@@ -9,6 +9,11 @@
     "dev": "ts-node-dev --respawn --transpileOnly ./src/app.ts",
     "prod": "rimraf ./build && tsc && node ./build/app.js"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "keywords": [
     "ciphers",
     "node.js",
@@ -22,8 +27,13 @@
     "typescript": "^3.2.4"
   },
   "devDependencies": {
+    "@types/jest": "^23.3.13",
+    "husky": "^1.3.1",
     "jest": "^24.0.0",
+    "prettier": "^1.16.1",
+    "pretty-quick": "^1.10.0",
     "rimraf": "^2.6.3",
+    "ts-jest": "^23.10.5",
     "ts-node-dev": "^1.0.0-pre.32"
   }
 }
